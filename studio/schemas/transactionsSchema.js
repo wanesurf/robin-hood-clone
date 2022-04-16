@@ -2,7 +2,7 @@ export const transactionsSchema = {
     name:'transactions',
     title:'Transations',
     type:'document',
-    field: [
+    fields: [
         {
             name:'txHash',
             title:'Transaction Hash',
@@ -26,7 +26,7 @@ export const transactionsSchema = {
         {
             name:'timeStamp',
             title:'TimeStamp',
-            type:'dateTime'
+            type:'datetime'
 
         }
     ]
