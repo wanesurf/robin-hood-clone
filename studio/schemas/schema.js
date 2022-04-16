@@ -1,5 +1,7 @@
 // First, we must import the schema creator
 import createSchema from 'part:@sanity/base/schema-creator'
+import {userSchema} from "./userSchema";
+import {transactionsSchema} from "./transactionsSchema";
 
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
@@ -8,9 +10,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 export default createSchema({
   // We name our schema
   name: 'default',
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([
-    /* Your types here! */
-  ]),
+//schema : how you want to stucture the data you store in the database
+  // on met dans les differents schema dans le array
+  types: schemaTypes.concat([userSchema,transactionsSchema]),
 })

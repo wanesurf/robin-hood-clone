@@ -5,6 +5,9 @@ import BuyTokens from "../components/BuyTokens";
 //Icons
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
 import { AiOutlinePlus } from 'react-icons/ai'
+import Notice from "../components/Notice";
+import Asset from "../components/Asset";
+import React from "react";
 
 
 const styles = {
@@ -62,7 +65,7 @@ export default function Home() {
                 <BuyTokens />
               </div>
             </div>
-            {/*<Notice />*/}
+            <Notice />
           </div>
           <div className={styles.rightMain}>
             <div className={styles.rightMainItem}>
@@ -71,7 +74,9 @@ export default function Home() {
               <BiDotsHorizontalRounded className={styles.moreOptions} />
             </div>
             {/*for each coin  create an asset componet*/}
-            {/*<Asset/>*/}
+            <Asset coin={"BTC"} price={30}/>
+            <Asset coin={"BTC"} price={30}/>
+            <Asset coin={"BTC"} price={30}/>
 
             <div className={styles.rightMainItem}>
               <div className={styles.ItemTitle}>Lists</div>

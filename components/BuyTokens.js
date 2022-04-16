@@ -9,9 +9,48 @@ const styles = {
   
 const BuyTokens = () => {
     return (
-        <div>
-            Enter
-        </div>
+        <form className={styles.formContainer}>
+            <div className='flex h-full w-full flex-col items-center'>
+                <select
+                    className={styles.select}
+                    // value={coinSelect}
+                    // onChange={e => setCoinSelect(e.target.value)}
+                >
+                    <option className={styles.options} value='ETH'>
+                        ETH
+                    </option>
+                    <option className={styles.options} value='DOGE'>
+                        DOGE
+                    </option>
+                    <option className={styles.options} value='USDC'>
+                        USDC
+                    </option>
+                    <option className={styles.options} value='LINK'>
+                        LINK
+                    </option>
+                    <option className={styles.options} value='DAI'>
+                        DAI
+                    </option>
+                </select>
+
+                <input
+                    placeholder='Amount...'
+                    className={styles.inputAmount}
+                    type='text'
+                    // value={amount}
+                    // onChange={e => setAmount(e.target.value)}
+                />
+
+                <button
+                    className={styles.noticeCTA}
+                    type='button'
+                    // disabled={!isAuthenticated}
+                    // onClick={() => mint()}
+                >
+                    Send
+                </button>
+            </div>
+        </form>
     );
 }
 
