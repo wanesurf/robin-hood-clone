@@ -9,7 +9,7 @@ export const userSchema = {
             type: 'string'
         },
         {
-            name:'useName',
+            name:'userName',
             title:'User Name',
             type:'string'
         },

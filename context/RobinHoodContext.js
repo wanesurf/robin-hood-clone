@@ -55,7 +55,7 @@ export const RobinHoodProvider = ({children}) => {
                 signOut,
                 currentAccount,
                 isAuthenticated,
-                formattedAccount
+                formattedAccount,
             }}
         >
             {children}

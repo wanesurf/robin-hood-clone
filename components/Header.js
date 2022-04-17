@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Image from "next/image";
 import logo from '../assets/logo.png'
+//context
+import {RobinHoodContext} from "../context/RobinHoodContext";
 
 import {AiOutlineSearch} from "react-icons/ai";
 const styles = {
@@ -21,9 +23,18 @@ function connectWallet() {
 
 console.log("login")
 }
-const isAuthenticated = false;
-const formatedAccount="my account";
+
 const Header = () => {
+
+    const {
+        connectWallet,
+        signOut,
+        currentAccount,
+        isAuthenticated,
+        formattedAccount
+
+
+    } = useContext(RobinHoodContext)
 
     return (
         <div className={styles.container}>
@@ -46,8 +57,8 @@ const Header = () => {
 
                 {isAuthenticated &&(
                     <>
-                    <div className={styles.menuItem}>{formatedAccount}</div>
-                    <div className={styles.menuItem} onClick={() => connectWallet() }>
+                    <div className={styles.menuItem}>{formattedAccount}</div>
+                    <div className={styles.menuItem} onClick={() => signOut() }>
                         Logout
                     </div>
                     </>
